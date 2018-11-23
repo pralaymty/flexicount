@@ -910,47 +910,47 @@ var map = {
 		13
 	],
 	"../pages/reghub/reghub.module": [
-		338,
+		340,
 		10
 	],
 	"../pages/reghub2/reghub2.module": [
-		339,
+		341,
 		12
 	],
 	"../pages/reghub3/reghub3.module": [
-		340,
+		338,
 		11
 	],
 	"../pages/regsen/regsen.module": [
-		341,
+		339,
 		6
 	],
 	"../pages/regsen2/regsen2.module": [
-		342,
+		343,
 		9
 	],
 	"../pages/regsen3/regsen3.module": [
-		343,
+		344,
 		8
 	],
 	"../pages/regsen4/regsen4.module": [
-		344,
+		342,
 		7
 	],
 	"../pages/sensorcon/sensorcon.module": [
-		345,
+		346,
 		5
 	],
 	"../pages/sensordtl/sensordtl.module": [
-		346,
+		347,
 		4
 	],
 	"../pages/sensorloc/sensorloc.module": [
-		347,
+		348,
 		3
 	],
 	"../pages/signoff/signoff.module": [
-		348,
+		345,
 		1
 	],
 	"../pages/signoff2/signoff2.module": [
@@ -1043,7 +1043,7 @@ var DashboardPage = /** @class */ (function () {
     };
     DashboardPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-dashboard',template:/*ion-inline-start:"E:\Pralay\work\StoreTech App\git\flexicount\src\pages\dashboard\dashboard.html"*/'\n\n<ion-content padding id="home_page">\n\n  <img class="header_image" src="../assets/imgs/brand.png"/>\n\n  <ion-grid class="dsah_imag">\n\n      <ion-row>\n\n        <ion-col col-6><img (click)=alertpg()  src="../assets/imgs/alert.PNG"><p>Alerts</p></ion-col>\n\n        <ion-col col-6><img (click)=signoffpg() src="../assets/imgs/Timer.PNG"><p>Sign off cleaning</p></ion-col>\n\n        <ion-col col-6><img (click)=reghubpg() src="../assets/imgs/box.PNG"><p>Register hub</p></ion-col>\n\n        <ion-col col-6><img (click)=regsensorpg() src="../assets/imgs/Reg_sensor.PNG"><p>Register sensor</p></ion-col>\n\n        <ion-col col-6><img (click)=devicepg() src="../assets/imgs/services2.PNG"><p>View/edit devices</p></ion-col>\n\n        <ion-col col-6><img (click)=estatepg() src="../assets/imgs/Estate2.PNG"><p>View estate</p></ion-col>\n\n      </ion-row>\n\n      <ion-row>\n\n          <ion-col col-12>\n\n            <button ion-button color="dark" full (click)=logout() large>Log Out</button>\n\n          </ion-col>\n\n      </ion-row>\n\n\n\n    </ion-grid>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"E:\Pralay\work\StoreTech App\git\flexicount\src\pages\dashboard\dashboard.html"*/,
+            selector: 'page-dashboard',template:/*ion-inline-start:"E:\Pralay\work\StoreTech App\git\flexicount\src\pages\dashboard\dashboard.html"*/'\n\n<ion-content padding id="home_page">\n\n  <img class="header_image" src="../assets/imgs/brand.png"/>\n\n  <ion-grid class="dsah_imag">\n\n      <ion-row>\n\n        <ion-col col-6><img (click)=alertpg()  src="./assets/imgs/alert.PNG"><p>Alerts</p></ion-col>\n\n        <ion-col col-6><img (click)=signoffpg() src="./assets/imgs/Timer.PNG"><p>Sign off cleaning</p></ion-col>\n\n        <ion-col col-6><img (click)=reghubpg() src="../assets/imgs/box.PNG"><p>Register hub</p></ion-col>\n\n        <ion-col col-6><img (click)=regsensorpg() src="../assets/imgs/Reg_sensor.PNG"><p>Register sensor</p></ion-col>\n\n        <ion-col col-6><img (click)=devicepg() src="../assets/imgs/services2.PNG"><p>View/edit devices</p></ion-col>\n\n        <ion-col col-6><img (click)=estatepg() src="../assets/imgs/Estate2.PNG"><p>View estate</p></ion-col>\n\n      </ion-row>\n\n      <ion-row>\n\n          <ion-col col-12>\n\n            <button ion-button color="dark" full (click)=logout() large>Log Out</button>\n\n          </ion-col>\n\n      </ion-row>\n\n\n\n    </ion-grid>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"E:\Pralay\work\StoreTech App\git\flexicount\src\pages\dashboard\dashboard.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
     ], DashboardPage);
@@ -1199,17 +1199,17 @@ var AppModule = /** @class */ (function () {
                         { loadChildren: '../pages/hubdtl/hubdtl.module#HubdtlPageModule', name: 'HubdtlPage', segment: 'hubdtl', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/hubloc/hubloc.module#HublocPageModule', name: 'HublocPage', segment: 'hubloc', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/news/news.module#NewsPageModule', name: 'NewsPage', segment: 'news', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/reghub/reghub.module#ReghubPageModule', name: 'ReghubPage', segment: 'reghub', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/reghub2/reghub2.module#Reghub2PageModule', name: 'Reghub2Page', segment: 'reghub2', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/reghub3/reghub3.module#Reghub3PageModule', name: 'Reghub3Page', segment: 'reghub3', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/regsen/regsen.module#RegsenPageModule', name: 'RegsenPage', segment: 'regsen', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/reghub/reghub.module#ReghubPageModule', name: 'ReghubPage', segment: 'reghub', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/reghub2/reghub2.module#Reghub2PageModule', name: 'Reghub2Page', segment: 'reghub2', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/regsen4/regsen4.module#Regsen4PageModule', name: 'Regsen4Page', segment: 'regsen4', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/regsen2/regsen2.module#Regsen2PageModule', name: 'Regsen2Page', segment: 'regsen2', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/regsen3/regsen3.module#Regsen3PageModule', name: 'Regsen3Page', segment: 'regsen3', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/regsen4/regsen4.module#Regsen4PageModule', name: 'Regsen4Page', segment: 'regsen4', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/signoff/signoff.module#SignoffPageModule', name: 'SignoffPage', segment: 'signoff', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/sensorcon/sensorcon.module#SensorconPageModule', name: 'SensorconPage', segment: 'sensorcon', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/sensordtl/sensordtl.module#SensordtlPageModule', name: 'SensordtlPage', segment: 'sensordtl', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/sensorloc/sensorloc.module#SensorlocPageModule', name: 'SensorlocPage', segment: 'sensorloc', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/signoff/signoff.module#SignoffPageModule', name: 'SignoffPage', segment: 'signoff', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/signoff2/signoff2.module#Signoff2PageModule', name: 'Signoff2Page', segment: 'signoff2', priority: 'low', defaultHistory: [] }
                     ]
                 })
