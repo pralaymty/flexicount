@@ -101,12 +101,12 @@ Pro.init('34b51387', {
     NewsPage
   ],
   providers: [
-    BarcodeScanner,
     Keyboard,
     Camera,
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
+    BarcodeScanner,
     SQLite,
     Toast,
     StoreProvider

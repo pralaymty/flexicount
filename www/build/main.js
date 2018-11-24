@@ -874,15 +874,15 @@ webpackEmptyAsyncContext.id = 141;
 
 var map = {
 	"../pages/alert/alert.module": [
-		330,
+		329,
 		20
 	],
 	"../pages/dashboard/dashboard.module": [
-		331,
+		330,
 		19
 	],
 	"../pages/dashbosrd/dashbosrd.module": [
-		329,
+		331,
 		0
 	],
 	"../pages/device/device.module": [
@@ -910,15 +910,15 @@ var map = {
 		13
 	],
 	"../pages/reghub/reghub.module": [
-		339,
+		338,
 		10
 	],
 	"../pages/reghub2/reghub2.module": [
-		340,
+		339,
 		12
 	],
 	"../pages/reghub3/reghub3.module": [
-		338,
+		340,
 		11
 	],
 	"../pages/regsen/regsen.module": [
@@ -1190,18 +1190,18 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_28__angular_http__["b" /* HttpModule */],
                 __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["d" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* MyApp */], {}, {
                     links: [
-                        { loadChildren: '../pages/dashbosrd/dashbosrd.module#DashbosrdPageModule', name: 'DashbosrdPage', segment: 'dashbosrd', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/alert/alert.module#AlertPageModule', name: 'AlertPage', segment: 'alert', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/dashboard/dashboard.module#DashboardPageModule', name: 'DashboardPage', segment: 'dashboard', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/dashbosrd/dashbosrd.module#DashbosrdPageModule', name: 'DashbosrdPage', segment: 'dashbosrd', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/device/device.module#DevicePageModule', name: 'DevicePage', segment: 'device', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/estate/estate.module#EstatePageModule', name: 'EstatePage', segment: 'estate', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/hubcon/hubcon.module#HubconPageModule', name: 'HubconPage', segment: 'hubcon', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/hubdtl/hubdtl.module#HubdtlPageModule', name: 'HubdtlPage', segment: 'hubdtl', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/hubloc/hubloc.module#HublocPageModule', name: 'HublocPage', segment: 'hubloc', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/news/news.module#NewsPageModule', name: 'NewsPage', segment: 'news', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/reghub3/reghub3.module#Reghub3PageModule', name: 'Reghub3Page', segment: 'reghub3', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/reghub/reghub.module#ReghubPageModule', name: 'ReghubPage', segment: 'reghub', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/reghub2/reghub2.module#Reghub2PageModule', name: 'Reghub2Page', segment: 'reghub2', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/reghub3/reghub3.module#Reghub3PageModule', name: 'Reghub3Page', segment: 'reghub3', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/regsen/regsen.module#RegsenPageModule', name: 'RegsenPage', segment: 'regsen', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/regsen2/regsen2.module#Regsen2PageModule', name: 'Regsen2Page', segment: 'regsen2', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/regsen3/regsen3.module#Regsen3PageModule', name: 'Regsen3Page', segment: 'regsen3', priority: 'low', defaultHistory: [] },
@@ -1240,12 +1240,12 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_27__pages_news_news__["a" /* NewsPage */]
             ],
             providers: [
-                __WEBPACK_IMPORTED_MODULE_31__ionic_native_barcode_scanner__["a" /* BarcodeScanner */],
                 __WEBPACK_IMPORTED_MODULE_29__ionic_native_keyboard__["a" /* Keyboard */],
                 __WEBPACK_IMPORTED_MODULE_30__ionic_native_camera__["a" /* Camera */],
                 __WEBPACK_IMPORTED_MODULE_5__ionic_native_status_bar__["a" /* StatusBar */],
                 __WEBPACK_IMPORTED_MODULE_4__ionic_native_splash_screen__["a" /* SplashScreen */],
                 { provide: __WEBPACK_IMPORTED_MODULE_2__angular_core__["u" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["c" /* IonicErrorHandler */] },
+                __WEBPACK_IMPORTED_MODULE_31__ionic_native_barcode_scanner__["a" /* BarcodeScanner */],
                 __WEBPACK_IMPORTED_MODULE_32__ionic_native_sqlite__["a" /* SQLite */],
                 __WEBPACK_IMPORTED_MODULE_33__ionic_native_toast__["a" /* Toast */],
                 __WEBPACK_IMPORTED_MODULE_34__providers_store_store__["a" /* StoreProvider */]
@@ -1493,12 +1493,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 // import { Toast } from '@ionic-native/toast';
 // import { DataServiceProvider } from '../../providers/data-service/data-service';
-//  import { QRScanner, QRScannerStatus } from '@ionic-native/qr-scanner';
+// import { QRScanner, QRScannerStatus } from '@ionic-native/qr-scanner';
 var SignoffPage = /** @class */ (function () {
-    function SignoffPage(navCtrl, navParams, barcodeScaner) {
+    function SignoffPage(navCtrl, navParams, barcodeScanner) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
-        this.barcodeScaner = barcodeScaner;
+        this.barcodeScanner = barcodeScanner;
         this.data = {};
     }
     SignoffPage.prototype.ionViewDidLoad = function () {
@@ -1509,7 +1509,7 @@ var SignoffPage = /** @class */ (function () {
         this.option = {
             prompt: "Focus the QR code in the window below to sign off cleaning"
         };
-        this.barcodeScaner.scan(this.option).then(function (barcodeData) {
+        this.barcodeScanner.scan(this.option).then(function (barcodeData) {
             console.log(barcodeData);
             _this.data = barcodeData;
             _this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__signoff2_signoff2__["a" /* Signoff2Page */], { data: barcodeData.text });
@@ -1518,19 +1518,33 @@ var SignoffPage = /** @class */ (function () {
             console.log('Error', err);
         });
     };
-    //  scan2(){
-    //        this.qrScanner.prepare()
-    //       .then((status: QRScannerStatus) => {
-    // start scanning
-    //          let scanSub = this.barcodeScaner.scan(this.option).then(barcodeData => {
-    //            console.log(barcodeData);
-    //             this.data = barcodeData;
-    //            this.qrScanner.hide(); // hide camera preview
-    // scanSub.unsubscribe(); // stop scanning
-    //          });
-    //      })
-    //      .catch((e: any) => console.log('Error is', e));
-    //  }
+    // scan2(){
+    //       this.qrScanner.prepare()
+    //      .then((status: QRScannerStatus) => {
+    //         if(status.authorized){
+    //         // camera permission was granted
+    //       // start scanning
+    //       let scanSub = this.qrScanner.scan().subscribe((text: string) => {
+    //        console.log('Scanned something', text);
+    //        alert(text);
+    //        this.qrScanner.hide(); // hide camera preview
+    //        scanSub.unsubscribe(); // stop scanning
+    //      });
+    //      this.qrScanner.resumePreview();
+    //          // show camera preview
+    //      this.qrScanner.show();
+    //    } else if (status.denied) {
+    //     // camera permission was permanently denied
+    //       // you must use QRScanner.openSettings() method to guide the user to the settings page
+    //       // then they can grant the permission from there
+    //      } else {
+    //        // permission was denied, but not permanently. You can ask for permission again at a later time.
+    //      }
+    //   })
+    //   .catch((e: any) => {
+    //        alert('Error is' + e);
+    //      });
+    // }
     SignoffPage.prototype.signoff2 = function () {
         this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__signoff2_signoff2__["a" /* Signoff2Page */]);
     };
@@ -1560,7 +1574,9 @@ var SignoffPage = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'page-signoff',template:/*ion-inline-start:"E:\Pralay\work\StoreTech App\git\flexicount\src\pages\signoff\signoff.html"*/'<ion-content padding id="home_page">\n\n  <img class="header_image" src="./assets/imgs/brand.png"/>\n\n  <h2 class="mtitle" >Scan QR Code</h2>\n\n\n\n  <ion-col col-12>\n\n      \n\n      <h3 class="text_center" >If you have finished cleaning this location please scan the sensor\'s QR code in the window below to sign off cleaning</h3>\n\n\n\n      <div class="qrscaner" >\n\n\n\n      </div> \n\n\n\n      <!-- <ion-list>\n\n        <ion-item>\n\n          <h3>Cancelled: {{data.cancelled}}</h3>\n\n          <h3>Format: {{data.format}}</h3>\n\n          <p>Text: {{data.text}}</p>  \n\n       </ion-item>\n\n      </ion-list> -->\n\n\n\n\n\n      <!-- <ion-card *ngIf="productFound">\n\n          <ion-card-header>\n\n            <h2>Price: $ {{selectedProduct.price}}</h2>\n\n          </ion-card-header>\n\n          <ion-card-content>\n\n            <ul>\n\n              <li>{{selectedProduct.plu}}</li>\n\n              <li>{{selectedProduct.name}}</li>\n\n              <li>{{selectedProduct.desc}}</li>\n\n            </ul>\n\n          </ion-card-content>\n\n        </ion-card> -->\n\n   \n\n\n\n\n\n<button ion-button color="secondary" full large (click) = scan2() >Capture QR Code</button>\n\n<button ion-button color="primary" full (click) = signoff2()>test sign off 2</button>\n\n</ion-col>\n\n\n\n</ion-content>\n\n\n\n'/*ion-inline-end:"E:\Pralay\work\StoreTech App\git\flexicount\src\pages\signoff\signoff.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_barcode_scanner__["a" /* BarcodeScanner */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
+            __WEBPACK_IMPORTED_MODULE_3__ionic_native_barcode_scanner__["a" /* BarcodeScanner */]])
     ], SignoffPage);
     return SignoffPage;
 }());
