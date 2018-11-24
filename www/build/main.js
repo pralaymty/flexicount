@@ -72,7 +72,7 @@ var AlertPage = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__dashboard_dashboard__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__signoff_signoff__ = __webpack_require__(57);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__signoff_signoff__ = __webpack_require__(58);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_http__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map__ = __webpack_require__(14);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map__);
@@ -584,142 +584,6 @@ var Regsen4Page = /** @class */ (function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SensorconPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__sensorloc_sensorloc__ = __webpack_require__(59);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__device_device__ = __webpack_require__(34);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_http__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map__ = __webpack_require__(14);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map__);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-
-/**
- * Generated class for the SensorconPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-var SensorconPage = /** @class */ (function () {
-    function SensorconPage(navCtrl, navParams, http) {
-        var _this = this;
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-        this.http = http;
-        this.text = {};
-        this.text = navParams.get('data');
-        var localData = http.get('assets/locationbak.json').map(function (res) { return res.json().locations; });
-        localData.subscribe(function (data) {
-            _this.loc = data; // json file data
-        });
-    }
-    SensorconPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad SensorconPage');
-    };
-    SensorconPage.prototype.senloc = function () {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__sensorloc_sensorloc__["a" /* SensorlocPage */]);
-    };
-    SensorconPage.prototype.device = function () {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__device_device__["a" /* DevicePage */]);
-    };
-    SensorconPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-sensorcon',template:/*ion-inline-start:"E:\Pralay\work\StoreTech App\git\flexicount\src\pages\sensorcon\sensorcon.html"*/'<ion-content padding id="home_page">\n\n  <img class="header_image" src="../assets/imgs/brand.png"/>\n\n  <h2 class="mtitle">New Device Settings</h2>\n\n\n\n  <ion-col col-12>\n\n     \n\n    <ion-card *ngFor="let item of loc">\n\n        <p *ngIf="text == item.qrcode">\n\n            Serial Number: {{item.qrcode}}<br/>\n\n            Location Name: {{item.store | slice:3:9}} {{item.department}}<br/>\n\n            Location Id: {{item.store | slice:3:5}}{{item.store | slice:6:8}}{{item.department | slice:0:1}}<br/>\n\n            Last Seen: <br/>\n\n            Battery Level: {{item.batterylavel}}<br/>\n\n            dBm: {{item.receivepower}}<br/>\n\n        </p>\n\n      </ion-card>\n\n\n\n<!-- <button ion-button color="primary" full (click)=newhub() >Register a New Hub</button>\n\n<button ion-button color="primary" full (click)=regsensor() >Register Sensor</button> -->\n\n<button ion-button color="yellow" full large (click)=device()>Save</button>\n\n<button ion-button color="dark" full large (click)=senloc()>Cancel And Back</button>\n\n\n\n  </ion-col>\n\n</ion-content>\n\n'/*ion-inline-end:"E:\Pralay\work\StoreTech App\git\flexicount\src\pages\sensorcon\sensorcon.html"*/,
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_4__angular_http__["a" /* Http */]])
-    ], SensorconPage);
-    return SensorconPage;
-}());
-
-//# sourceMappingURL=sensorcon.js.map
-
-/***/ }),
-
-/***/ 128:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HubconPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__hubloc_hubloc__ = __webpack_require__(61);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__device_device__ = __webpack_require__(34);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_http__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map__ = __webpack_require__(14);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map__);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-
-/**
- * Generated class for the HubconPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-var HubconPage = /** @class */ (function () {
-    function HubconPage(navCtrl, navParams, http) {
-        var _this = this;
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-        this.http = http;
-        this.text = {};
-        this.text = navParams.get('data'); //bar code data //
-        var localData = http.get('assets/locationbak.json').map(function (res) { return res.json().locations; });
-        localData.subscribe(function (data) {
-            _this.loc = data; // json file data
-        });
-    }
-    HubconPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad HubconPage');
-    };
-    HubconPage.prototype.hubloc = function () {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__hubloc_hubloc__["a" /* HublocPage */]);
-    };
-    HubconPage.prototype.device = function () {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__device_device__["a" /* DevicePage */]);
-    };
-    HubconPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-hubcon',template:/*ion-inline-start:"E:\Pralay\work\StoreTech App\git\flexicount\src\pages\hubcon\hubcon.html"*/'<ion-content padding id="home_page">\n\n    <img class="header_image" src="../assets/imgs/brand.png"/>\n\n    <h2 class="mtitle">New Device Settings</h2>\n\n  \n\n    <ion-col col-12>\n\n        <ion-card *ngFor="let item of loc">\n\n            <p *ngIf="text == item.qrcode">\n\n                Location Name: {{item.store | slice:3:9}} {{item.department}}<br/>\n\n                Location Id: {{item.store | slice:3:5}}{{item.store | slice:6:8}}{{item.department | slice:0:1}}<br/>\n\n                Last Seen: {{item.lastseen}}<br/>\n\n                Network Type: {{item.networktype}}<br/>\n\n                dBm: {{item.localnoise}}<br/>\n\n            </p>\n\n          </ion-card>\n\n  \n\n  <!-- <button ion-button color="primary" full (click)=newhub() >Register a New Hub</button>\n\n  <button ion-button color="primary" full (click)=regsensor() >Register Sensor</button> -->\n\n  <button ion-button color="secondary" full large (click) = device() >Save</button>\n\n  <button ion-button color="dark" full large (click) = hubloc() >Cancel & Back</button>\n\n  \n\n    </ion-col>\n\n  </ion-content>\n\n  '/*ion-inline-end:"E:\Pralay\work\StoreTech App\git\flexicount\src\pages\hubcon\hubcon.html"*/,
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_4__angular_http__["a" /* Http */]])
-    ], HubconPage);
-    return HubconPage;
-}());
-
-//# sourceMappingURL=hubcon.js.map
-
-/***/ }),
-
-/***/ 129:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EstatePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
@@ -783,7 +647,7 @@ var EstatePage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 130:
+/***/ 128:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -852,6 +716,142 @@ var NewsPage = /** @class */ (function () {
 
 /***/ }),
 
+/***/ 129:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SensorconPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__sensorloc_sensorloc__ = __webpack_require__(59);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__device_device__ = __webpack_require__(34);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_http__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map__);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+/**
+ * Generated class for the SensorconPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var SensorconPage = /** @class */ (function () {
+    function SensorconPage(navCtrl, navParams, http) {
+        var _this = this;
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.http = http;
+        this.text = {};
+        this.text = navParams.get('data');
+        var localData = http.get('assets/locationbak.json').map(function (res) { return res.json().locations; });
+        localData.subscribe(function (data) {
+            _this.loc = data; // json file data
+        });
+    }
+    SensorconPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad SensorconPage');
+    };
+    SensorconPage.prototype.senloc = function () {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__sensorloc_sensorloc__["a" /* SensorlocPage */]);
+    };
+    SensorconPage.prototype.device = function () {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__device_device__["a" /* DevicePage */]);
+    };
+    SensorconPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-sensorcon',template:/*ion-inline-start:"E:\Pralay\work\StoreTech App\git\flexicount\src\pages\sensorcon\sensorcon.html"*/'<ion-content padding id="home_page">\n\n  <img class="header_image" src="../assets/imgs/brand.png"/>\n\n  <h2 class="mtitle">New Device Settings</h2>\n\n\n\n  <ion-col col-12>\n\n     \n\n    <ion-card *ngFor="let item of loc">\n\n        <p *ngIf="text == item.qrcode">\n\n            Serial Number: {{item.qrcode}}<br/>\n\n            Location Name: {{item.store | slice:3:9}} {{item.department}}<br/>\n\n            Location Id: {{item.store | slice:3:5}}{{item.store | slice:6:8}}{{item.department | slice:0:1}}<br/>\n\n            Last Seen: <br/>\n\n            Battery Level: {{item.batterylavel}}<br/>\n\n            dBm: {{item.receivepower}}<br/>\n\n        </p>\n\n      </ion-card>\n\n\n\n<!-- <button ion-button color="primary" full (click)=newhub() >Register a New Hub</button>\n\n<button ion-button color="primary" full (click)=regsensor() >Register Sensor</button> -->\n\n<button ion-button color="yellow" full large (click)=device()>Save</button>\n\n<button ion-button color="dark" full large (click)=senloc()>Cancel And Back</button>\n\n\n\n  </ion-col>\n\n</ion-content>\n\n'/*ion-inline-end:"E:\Pralay\work\StoreTech App\git\flexicount\src\pages\sensorcon\sensorcon.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_4__angular_http__["a" /* Http */]])
+    ], SensorconPage);
+    return SensorconPage;
+}());
+
+//# sourceMappingURL=sensorcon.js.map
+
+/***/ }),
+
+/***/ 130:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HubconPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__hubloc_hubloc__ = __webpack_require__(61);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__device_device__ = __webpack_require__(34);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_http__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map__);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+/**
+ * Generated class for the HubconPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var HubconPage = /** @class */ (function () {
+    function HubconPage(navCtrl, navParams, http) {
+        var _this = this;
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.http = http;
+        this.text = {};
+        this.text = navParams.get('data'); //bar code data //
+        var localData = http.get('assets/locationbak.json').map(function (res) { return res.json().locations; });
+        localData.subscribe(function (data) {
+            _this.loc = data; // json file data
+        });
+    }
+    HubconPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad HubconPage');
+    };
+    HubconPage.prototype.hubloc = function () {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__hubloc_hubloc__["a" /* HublocPage */]);
+    };
+    HubconPage.prototype.device = function () {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__device_device__["a" /* DevicePage */]);
+    };
+    HubconPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-hubcon',template:/*ion-inline-start:"E:\Pralay\work\StoreTech App\git\flexicount\src\pages\hubcon\hubcon.html"*/'<ion-content padding id="home_page">\n\n    <img class="header_image" src="../assets/imgs/brand.png"/>\n\n    <h2 class="mtitle">New Device Settings</h2>\n\n  \n\n    <ion-col col-12>\n\n        <ion-card *ngFor="let item of loc">\n\n            <p *ngIf="text == item.qrcode">\n\n                Location Name: {{item.store | slice:3:9}} {{item.department}}<br/>\n\n                Location Id: {{item.store | slice:3:5}}{{item.store | slice:6:8}}{{item.department | slice:0:1}}<br/>\n\n                Last Seen: {{item.lastseen}}<br/>\n\n                Network Type: {{item.networktype}}<br/>\n\n                dBm: {{item.localnoise}}<br/>\n\n            </p>\n\n          </ion-card>\n\n  \n\n  <!-- <button ion-button color="primary" full (click)=newhub() >Register a New Hub</button>\n\n  <button ion-button color="primary" full (click)=regsensor() >Register Sensor</button> -->\n\n  <button ion-button color="secondary" full large (click) = device() >Save</button>\n\n  <button ion-button color="dark" full large (click) = hubloc() >Cancel & Back</button>\n\n  \n\n    </ion-col>\n\n  </ion-content>\n\n  '/*ion-inline-end:"E:\Pralay\work\StoreTech App\git\flexicount\src\pages\hubcon\hubcon.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_4__angular_http__["a" /* Http */]])
+    ], HubconPage);
+    return HubconPage;
+}());
+
+//# sourceMappingURL=hubcon.js.map
+
+/***/ }),
+
 /***/ 141:
 /***/ (function(module, exports) {
 
@@ -874,11 +874,11 @@ webpackEmptyAsyncContext.id = 141;
 
 var map = {
 	"../pages/alert/alert.module": [
-		330,
+		331,
 		20
 	],
 	"../pages/dashboard/dashboard.module": [
-		331,
+		334,
 		19
 	],
 	"../pages/dashbosrd/dashbosrd.module": [
@@ -886,15 +886,15 @@ var map = {
 		0
 	],
 	"../pages/device/device.module": [
-		332,
+		330,
 		18
 	],
 	"../pages/estate/estate.module": [
-		333,
+		332,
 		17
 	],
 	"../pages/hubcon/hubcon.module": [
-		334,
+		333,
 		16
 	],
 	"../pages/hubdtl/hubdtl.module": [
@@ -914,47 +914,47 @@ var map = {
 		10
 	],
 	"../pages/reghub2/reghub2.module": [
-		341,
+		338,
 		12
 	],
 	"../pages/reghub3/reghub3.module": [
-		338,
+		339,
 		11
 	],
 	"../pages/regsen/regsen.module": [
-		339,
+		349,
 		6
 	],
 	"../pages/regsen2/regsen2.module": [
-		343,
+		341,
 		9
 	],
 	"../pages/regsen3/regsen3.module": [
-		344,
+		342,
 		8
 	],
 	"../pages/regsen4/regsen4.module": [
-		342,
+		343,
 		7
 	],
 	"../pages/sensorcon/sensorcon.module": [
-		346,
+		344,
 		5
 	],
 	"../pages/sensordtl/sensordtl.module": [
-		347,
+		345,
 		4
 	],
 	"../pages/sensorloc/sensorloc.module": [
-		348,
+		346,
 		3
 	],
 	"../pages/signoff/signoff.module": [
-		345,
+		347,
 		1
 	],
 	"../pages/signoff2/signoff2.module": [
-		349,
+		348,
 		2
 	]
 };
@@ -982,11 +982,11 @@ module.exports = webpackAsyncContext;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__alert_alert__ = __webpack_require__(118);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__signoff_signoff__ = __webpack_require__(57);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__signoff_signoff__ = __webpack_require__(58);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__reghub_reghub__ = __webpack_require__(120);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__regsen_regsen__ = __webpack_require__(123);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__device_device__ = __webpack_require__(34);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__estate_estate__ = __webpack_require__(129);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__estate_estate__ = __webpack_require__(127);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__home_home__ = __webpack_require__(91);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1084,24 +1084,24 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_home_home__ = __webpack_require__(91);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_dashboard_dashboard__ = __webpack_require__(21);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_alert_alert__ = __webpack_require__(118);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_signoff_signoff__ = __webpack_require__(57);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_signoff_signoff__ = __webpack_require__(58);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_signoff2_signoff2__ = __webpack_require__(119);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_reghub_reghub__ = __webpack_require__(120);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_reghub2_reghub2__ = __webpack_require__(121);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_regsen_regsen__ = __webpack_require__(123);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_regsen2_regsen2__ = __webpack_require__(124);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_device_device__ = __webpack_require__(34);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_estate_estate__ = __webpack_require__(129);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_estate_estate__ = __webpack_require__(127);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_reghub3_reghub3__ = __webpack_require__(122);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_regsen3_regsen3__ = __webpack_require__(125);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__pages_regsen4_regsen4__ = __webpack_require__(126);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__pages_sensordtl_sensordtl__ = __webpack_require__(58);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__pages_sensordtl_sensordtl__ = __webpack_require__(57);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__pages_sensorloc_sensorloc__ = __webpack_require__(59);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__pages_sensorcon_sensorcon__ = __webpack_require__(127);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__pages_sensorcon_sensorcon__ = __webpack_require__(129);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__pages_hubdtl_hubdtl__ = __webpack_require__(60);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__pages_hubloc_hubloc__ = __webpack_require__(61);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__pages_hubcon_hubcon__ = __webpack_require__(128);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__pages_news_news__ = __webpack_require__(130);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__pages_hubcon_hubcon__ = __webpack_require__(130);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__pages_news_news__ = __webpack_require__(128);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__angular_http__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__ionic_native_keyboard__ = __webpack_require__(184);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__ionic_native_camera__ = __webpack_require__(185);
@@ -1191,26 +1191,26 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["d" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* MyApp */], {}, {
                     links: [
                         { loadChildren: '../pages/dashbosrd/dashbosrd.module#DashbosrdPageModule', name: 'DashbosrdPage', segment: 'dashbosrd', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/alert/alert.module#AlertPageModule', name: 'AlertPage', segment: 'alert', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/dashboard/dashboard.module#DashboardPageModule', name: 'DashboardPage', segment: 'dashboard', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/device/device.module#DevicePageModule', name: 'DevicePage', segment: 'device', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/alert/alert.module#AlertPageModule', name: 'AlertPage', segment: 'alert', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/estate/estate.module#EstatePageModule', name: 'EstatePage', segment: 'estate', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/hubcon/hubcon.module#HubconPageModule', name: 'HubconPage', segment: 'hubcon', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/dashboard/dashboard.module#DashboardPageModule', name: 'DashboardPage', segment: 'dashboard', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/hubdtl/hubdtl.module#HubdtlPageModule', name: 'HubdtlPage', segment: 'hubdtl', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/hubloc/hubloc.module#HublocPageModule', name: 'HublocPage', segment: 'hubloc', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/news/news.module#NewsPageModule', name: 'NewsPage', segment: 'news', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/reghub3/reghub3.module#Reghub3PageModule', name: 'Reghub3Page', segment: 'reghub3', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/regsen/regsen.module#RegsenPageModule', name: 'RegsenPage', segment: 'regsen', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/reghub/reghub.module#ReghubPageModule', name: 'ReghubPage', segment: 'reghub', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/reghub2/reghub2.module#Reghub2PageModule', name: 'Reghub2Page', segment: 'reghub2', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/regsen4/regsen4.module#Regsen4PageModule', name: 'Regsen4Page', segment: 'regsen4', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/reghub3/reghub3.module#Reghub3PageModule', name: 'Reghub3Page', segment: 'reghub3', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/reghub/reghub.module#ReghubPageModule', name: 'ReghubPage', segment: 'reghub', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/regsen2/regsen2.module#Regsen2PageModule', name: 'Regsen2Page', segment: 'regsen2', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/regsen3/regsen3.module#Regsen3PageModule', name: 'Regsen3Page', segment: 'regsen3', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/signoff/signoff.module#SignoffPageModule', name: 'SignoffPage', segment: 'signoff', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/regsen4/regsen4.module#Regsen4PageModule', name: 'Regsen4Page', segment: 'regsen4', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/sensorcon/sensorcon.module#SensorconPageModule', name: 'SensorconPage', segment: 'sensorcon', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/sensordtl/sensordtl.module#SensordtlPageModule', name: 'SensordtlPage', segment: 'sensordtl', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/sensorloc/sensorloc.module#SensorlocPageModule', name: 'SensorlocPage', segment: 'sensorloc', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/signoff2/signoff2.module#Signoff2PageModule', name: 'Signoff2Page', segment: 'signoff2', priority: 'low', defaultHistory: [] }
+                        { loadChildren: '../pages/signoff/signoff.module#SignoffPageModule', name: 'SignoffPage', segment: 'signoff', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/signoff2/signoff2.module#Signoff2PageModule', name: 'Signoff2Page', segment: 'signoff2', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/regsen/regsen.module#RegsenPageModule', name: 'RegsenPage', segment: 'regsen', priority: 'low', defaultHistory: [] }
                     ]
                 })
             ],
@@ -1380,7 +1380,7 @@ var StoreProvider = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DevicePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__sensordtl_sensordtl__ = __webpack_require__(58);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__sensordtl_sensordtl__ = __webpack_require__(57);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__hubdtl_hubdtl__ = __webpack_require__(60);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_barcode_scanner__ = __webpack_require__(47);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_http__ = __webpack_require__(13);
@@ -1470,6 +1470,79 @@ var DevicePage = /** @class */ (function () {
 /***/ }),
 
 /***/ 57:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SensordtlPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__dashboard_dashboard__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__device_device__ = __webpack_require__(34);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__sensorloc_sensorloc__ = __webpack_require__(59);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_http__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_map__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_map__);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+
+/**
+ * Generated class for the SensordtlPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var SensordtlPage = /** @class */ (function () {
+    function SensordtlPage(navCtrl, navParams, http) {
+        var _this = this;
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.http = http;
+        this.text = {};
+        this.text = navParams.get('data'); //bar code data //navParams.get('data')
+        var localData = http.get('assets/locationbak.json').map(function (res) { return res.json().locations; });
+        localData.subscribe(function (data) {
+            _this.loc = data; // json file data
+        });
+    }
+    SensordtlPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad SensordtlPage');
+    };
+    SensordtlPage.prototype.dashbd = function () {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__dashboard_dashboard__["a" /* DashboardPage */]);
+    };
+    SensordtlPage.prototype.device = function () {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__device_device__["a" /* DevicePage */]);
+    };
+    SensordtlPage.prototype.senloc = function () {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__sensorloc_sensorloc__["a" /* SensorlocPage */], { data: this.text });
+    };
+    SensordtlPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-sensordtl',template:/*ion-inline-start:"E:\Pralay\work\StoreTech App\git\flexicount\src\pages\sensordtl\sensordtl.html"*/'<ion-content padding id="home_page">\n\n  <img class="header_image" src="../assets/imgs/brand.png"/>\n\n  <h2 class="mtitle">Sensor Details</h2>\n\n\n\n  <ion-col col-12>\n\n      <p>Below are the current settings for this device</p>\n\n\n\n      <!-- <ion-card *ngFor="let item of loc">\n\n        <h3 class="text_center" *ngIf="text == item.qrcode">You are about to sign off cleaning for {{item.store}} {{item.department}} </h3> \n\n      </ion-card> -->\n\n\n\n      <ion-card *ngFor="let item of loc">\n\n          <p *ngIf="text == item.qrcode">\n\n              Serial Number: {{item.qrcode}}<br/>\n\n              Location Name: {{item.store | slice:3:9}} {{item.department}}<br/>\n\n              Location Id: {{item.store | slice:3:5}}{{item.store | slice:6:8}}{{item.department | slice:0:1}}<br/>\n\n              Last Seen: <br/>\n\n              Battery Level: {{item.batterylavel}}<br/>\n\n              dBm: {{item.receivepower}}<br/>\n\n          </p>\n\n        </ion-card>\n\n\n\n<button ion-button color="violate" full large (click)=senloc() >Edit Location</button>\n\n<button ion-button color="yellow" full large (click)=device() >Scan Another Device</button>\n\n<button ion-button color="primary" full large (click)=dashbd()>Home</button>\n\n\n\n  </ion-col>\n\n</ion-content>\n\n'/*ion-inline-end:"E:\Pralay\work\StoreTech App\git\flexicount\src\pages\sensordtl\sensordtl.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_5__angular_http__["a" /* Http */]])
+    ], SensordtlPage);
+    return SensordtlPage;
+}());
+
+//# sourceMappingURL=sensordtl.js.map
+
+/***/ }),
+
+/***/ 58:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1569,79 +1642,6 @@ var SignoffPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 58:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SensordtlPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__dashboard_dashboard__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__device_device__ = __webpack_require__(34);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__sensorloc_sensorloc__ = __webpack_require__(59);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_http__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_map__ = __webpack_require__(14);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_map__);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-
-
-/**
- * Generated class for the SensordtlPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-var SensordtlPage = /** @class */ (function () {
-    function SensordtlPage(navCtrl, navParams, http) {
-        var _this = this;
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-        this.http = http;
-        this.text = {};
-        this.text = navParams.get('data'); //bar code data //navParams.get('data')
-        var localData = http.get('assets/locationbak.json').map(function (res) { return res.json().locations; });
-        localData.subscribe(function (data) {
-            _this.loc = data; // json file data
-        });
-    }
-    SensordtlPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad SensordtlPage');
-    };
-    SensordtlPage.prototype.dashbd = function () {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__dashboard_dashboard__["a" /* DashboardPage */]);
-    };
-    SensordtlPage.prototype.device = function () {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__device_device__["a" /* DevicePage */]);
-    };
-    SensordtlPage.prototype.senloc = function () {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__sensorloc_sensorloc__["a" /* SensorlocPage */], { data: this.text });
-    };
-    SensordtlPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-sensordtl',template:/*ion-inline-start:"E:\Pralay\work\StoreTech App\git\flexicount\src\pages\sensordtl\sensordtl.html"*/'<ion-content padding id="home_page">\n\n  <img class="header_image" src="../assets/imgs/brand.png"/>\n\n  <h2 class="mtitle">Sensor Details</h2>\n\n\n\n  <ion-col col-12>\n\n      <p>Below are the current settings for this device</p>\n\n\n\n      <!-- <ion-card *ngFor="let item of loc">\n\n        <h3 class="text_center" *ngIf="text == item.qrcode">You are about to sign off cleaning for {{item.store}} {{item.department}} </h3> \n\n      </ion-card> -->\n\n\n\n      <ion-card *ngFor="let item of loc">\n\n          <p *ngIf="text == item.qrcode">\n\n              Serial Number: {{item.qrcode}}<br/>\n\n              Location Name: {{item.store | slice:3:9}} {{item.department}}<br/>\n\n              Location Id: {{item.store | slice:3:5}}{{item.store | slice:6:8}}{{item.department | slice:0:1}}<br/>\n\n              Last Seen: <br/>\n\n              Battery Level: {{item.batterylavel}}<br/>\n\n              dBm: {{item.receivepower}}<br/>\n\n          </p>\n\n        </ion-card>\n\n\n\n<button ion-button color="violate" full large (click)=senloc() >Edit Location</button>\n\n<button ion-button color="yellow" full large (click)=device() >Scan Another Device</button>\n\n<button ion-button color="primary" full large (click)=dashbd()>Home</button>\n\n\n\n  </ion-col>\n\n</ion-content>\n\n'/*ion-inline-end:"E:\Pralay\work\StoreTech App\git\flexicount\src\pages\sensordtl\sensordtl.html"*/,
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_5__angular_http__["a" /* Http */]])
-    ], SensordtlPage);
-    return SensordtlPage;
-}());
-
-//# sourceMappingURL=sensordtl.js.map
-
-/***/ }),
-
 /***/ 59:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1649,8 +1649,8 @@ var SensordtlPage = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SensorlocPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__sensorcon_sensorcon__ = __webpack_require__(127);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__sensordtl_sensordtl__ = __webpack_require__(58);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__sensorcon_sensorcon__ = __webpack_require__(129);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__sensordtl_sensordtl__ = __webpack_require__(57);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_http__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map__ = __webpack_require__(14);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map__);
@@ -1796,7 +1796,7 @@ var HubdtlPage = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HublocPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__hubcon_hubcon__ = __webpack_require__(128);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__hubcon_hubcon__ = __webpack_require__(130);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__hubdtl_hubdtl__ = __webpack_require__(60);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_http__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map__ = __webpack_require__(14);
@@ -1871,7 +1871,7 @@ var HublocPage = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__dashboard_dashboard__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__news_news__ = __webpack_require__(130);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__news_news__ = __webpack_require__(128);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
