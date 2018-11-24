@@ -29,13 +29,7 @@
     "cordova-plugin-camera": {
       "PACKAGE_NAME": "com.nodomain.flexicount"
     },
-    "cordova-sqlite-storage": {
-      "PACKAGE_NAME": "com.nodomain.flexicount"
-    },
     "cordova-plugin-x-toast": {
-      "PACKAGE_NAME": "com.nodomain.flexicount"
-    },
-    "cordova-plugin-sqlite-2": {
       "PACKAGE_NAME": "com.nodomain.flexicount"
     },
     "cordova-plugin-ionic": {

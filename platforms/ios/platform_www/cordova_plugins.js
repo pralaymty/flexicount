@@ -276,14 +276,6 @@ module.exports = [
     ]
   },
   {
-    "id": "cordova-plugin-sqlite-2.sqlitePlugin",
-    "file": "plugins/cordova-plugin-sqlite-2/dist/sqlite-plugin.js",
-    "pluginId": "cordova-plugin-sqlite-2",
-    "clobbers": [
-      "sqlitePlugin"
-    ]
-  },
-  {
     "id": "cordova-plugin-statusbar.statusbar",
     "file": "plugins/cordova-plugin-statusbar/www/statusbar.js",
     "pluginId": "cordova-plugin-statusbar",
@@ -297,14 +289,6 @@ module.exports = [
     "pluginId": "cordova-plugin-x-toast",
     "clobbers": [
       "window.plugins.toast"
-    ]
-  },
-  {
-    "id": "cordova-sqlite-storage.SQLitePlugin",
-    "file": "plugins/cordova-sqlite-storage/www/SQLitePlugin.js",
-    "pluginId": "cordova-sqlite-storage",
-    "clobbers": [
-      "SQLitePlugin"
     ]
   },
   {
@@ -327,11 +311,9 @@ module.exports.metadata =
   "cordova-plugin-ionic-webview": "2.2.5",
   "cordova-plugin-ionic": "5.2.7",
   "cordova-plugin-ionic-keyboard": "2.1.3",
-  "cordova-plugin-sqlite-2": "1.0.4",
   "cordova-plugin-statusbar": "2.4.2",
   "cordova-plugin-whitelist": "1.3.3",
   "cordova-plugin-x-toast": "2.7.0",
-  "cordova-sqlite-storage": "2.5.0",
   "phonegap-plugin-barcodescanner": "8.0.0"
 };
 // BOTTOM OF METADATA
