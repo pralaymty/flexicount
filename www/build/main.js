@@ -365,7 +365,7 @@ var RegsenPage = /** @class */ (function () {
     };
     RegsenPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-regsen',template:/*ion-inline-start:"E:\Pralay\work\StoreTech App\git\flexicount\src\pages\regsen\regsen.html"*/'<ion-content padding id="home_page">\n\n  <img class="header_image" src="./assets/imgs/brand.png"/>\n\n  <h2 class="mtitle">Register Sensor</h2>\n\n\n\n  <ion-col col-12>\n\n      \n\n      <h3 class="text_center" >Focus the sensors QR code in the window below</h3>\n\n\n\n      <div class="qrscaner">\n\n\n\n      </div>\n\n   \n\n\n\n\n\n<button ion-button color="secondary" full (click) = scan() large>Capture QR Code</button>\n\n<!-- <button ion-button color="primary" full (click) = sensor2() >Sensor 2</button> -->\n\n</ion-col>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"E:\Pralay\work\StoreTech App\git\flexicount\src\pages\regsen\regsen.html"*/,
+            selector: 'page-regsen',template:/*ion-inline-start:"E:\Pralay\work\StoreTech App\git\flexicount\src\pages\regsen\regsen.html"*/'<ion-content padding id="home_page">\n\n  <img class="header_image" src="./assets/imgs/brand.png"/>\n\n  <h2 class="mtitle">Register Sensor</h2>\n\n\n\n  <ion-col col-12>\n\n      \n\n      <h3 class="text_center" >Focus the sensors QR code in the window below</h3>\n\n\n\n      <div class="qrscaner">\n\n\n\n      </div>\n\n   \n\n\n\n\n\n<button ion-button color="secondary" full (click) = scan() large>Capture QR Code</button>\n\n<button ion-button color="primary" full (click) = sensor2() >Sensor 2</button>\n\n</ion-col>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"E:\Pralay\work\StoreTech App\git\flexicount\src\pages\regsen\regsen.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_barcode_scanner__["a" /* BarcodeScanner */]])
     ], RegsenPage);
@@ -938,23 +938,23 @@ var map = {
 		7
 	],
 	"../pages/sensorcon/sensorcon.module": [
-		345,
+		347,
 		5
 	],
 	"../pages/sensordtl/sensordtl.module": [
-		346,
+		345,
 		4
 	],
 	"../pages/sensorloc/sensorloc.module": [
-		347,
+		346,
 		3
 	],
 	"../pages/signoff/signoff.module": [
-		348,
+		349,
 		1
 	],
 	"../pages/signoff2/signoff2.module": [
-		349,
+		348,
 		2
 	]
 };
@@ -1206,11 +1206,11 @@ var AppModule = /** @class */ (function () {
                         { loadChildren: '../pages/regsen2/regsen2.module#Regsen2PageModule', name: 'Regsen2Page', segment: 'regsen2', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/regsen3/regsen3.module#Regsen3PageModule', name: 'Regsen3Page', segment: 'regsen3', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/regsen4/regsen4.module#Regsen4PageModule', name: 'Regsen4Page', segment: 'regsen4', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/sensorcon/sensorcon.module#SensorconPageModule', name: 'SensorconPage', segment: 'sensorcon', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/sensordtl/sensordtl.module#SensordtlPageModule', name: 'SensordtlPage', segment: 'sensordtl', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/sensorloc/sensorloc.module#SensorlocPageModule', name: 'SensorlocPage', segment: 'sensorloc', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/signoff/signoff.module#SignoffPageModule', name: 'SignoffPage', segment: 'signoff', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/signoff2/signoff2.module#Signoff2PageModule', name: 'Signoff2Page', segment: 'signoff2', priority: 'low', defaultHistory: [] }
+                        { loadChildren: '../pages/sensorcon/sensorcon.module#SensorconPageModule', name: 'SensorconPage', segment: 'sensorcon', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/signoff2/signoff2.module#Signoff2PageModule', name: 'Signoff2Page', segment: 'signoff2', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/signoff/signoff.module#SignoffPageModule', name: 'SignoffPage', segment: 'signoff', priority: 'low', defaultHistory: [] }
                     ]
                 })
             ],
@@ -1572,7 +1572,7 @@ var SignoffPage = /** @class */ (function () {
     };
     SignoffPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-signoff',template:/*ion-inline-start:"E:\Pralay\work\StoreTech App\git\flexicount\src\pages\signoff\signoff.html"*/'<ion-content padding id="home_page">\n\n  <img class="header_image" src="./assets/imgs/brand.png"/>\n\n  <h2 class="mtitle" >Scan QR Code</h2>\n\n\n\n  <ion-col col-12>\n\n      \n\n      <h3 class="text_center" >If you have finished cleaning this location please scan the sensor\'s QR code in the window below to sign off cleaning</h3>\n\n\n\n      <div class="qrscaner" >\n\n\n\n      </div> \n\n\n\n      <!-- <ion-list>\n\n        <ion-item>\n\n          <h3>Cancelled: {{data.cancelled}}</h3>\n\n          <h3>Format: {{data.format}}</h3>\n\n          <p>Text: {{data.text}}</p>  \n\n       </ion-item>\n\n      </ion-list> -->\n\n\n\n\n\n      <!-- <ion-card *ngIf="productFound">\n\n          <ion-card-header>\n\n            <h2>Price: $ {{selectedProduct.price}}</h2>\n\n          </ion-card-header>\n\n          <ion-card-content>\n\n            <ul>\n\n              <li>{{selectedProduct.plu}}</li>\n\n              <li>{{selectedProduct.name}}</li>\n\n              <li>{{selectedProduct.desc}}</li>\n\n            </ul>\n\n          </ion-card-content>\n\n        </ion-card> -->\n\n   \n\n\n\n\n\n<button ion-button color="secondary" full large (click) = scan2() >Capture QR Code</button>\n\n<button ion-button color="primary" full (click) = signoff2()>test sign off 2</button>\n\n</ion-col>\n\n\n\n</ion-content>\n\n\n\n'/*ion-inline-end:"E:\Pralay\work\StoreTech App\git\flexicount\src\pages\signoff\signoff.html"*/,
+            selector: 'page-signoff',template:/*ion-inline-start:"E:\Pralay\work\StoreTech App\git\flexicount\src\pages\signoff\signoff.html"*/'<ion-content padding id="home_page">\n\n  <img class="header_image" src="./assets/imgs/brand.png"/>\n\n  <h2 class="mtitle" >Scan QR Code</h2>\n\n\n\n  <ion-col col-12>\n\n      \n\n      <h3 class="text_center" >If you have finished cleaning this location please scan the sensor\'s QR code in the window below to sign off cleaning</h3>\n\n\n\n      <div class="qrscaner" >\n\n\n\n      </div> \n\n\n\n      <!-- <ion-list>\n\n        <ion-item>\n\n          <h3>Cancelled: {{data.cancelled}}</h3>\n\n          <h3>Format: {{data.format}}</h3>\n\n          <p>Text: {{data.text}}</p>  \n\n       </ion-item>\n\n      </ion-list> -->\n\n\n\n\n\n      <!-- <ion-card *ngIf="productFound">\n\n          <ion-card-header>\n\n            <h2>Price: $ {{selectedProduct.price}}</h2>\n\n          </ion-card-header>\n\n          <ion-card-content>\n\n            <ul>\n\n              <li>{{selectedProduct.plu}}</li>\n\n              <li>{{selectedProduct.name}}</li>\n\n              <li>{{selectedProduct.desc}}</li>\n\n            </ul>\n\n          </ion-card-content>\n\n        </ion-card> -->\n\n   \n\n\n\n\n\n<button ion-button color="secondary" full large (click) = scan2() >Capture QR Code</button>\n\n<!-- <button ion-button color="primary" full (click) = signoff2()>test sign off 2</button> -->\n\n</ion-col>\n\n\n\n</ion-content>\n\n\n\n'/*ion-inline-end:"E:\Pralay\work\StoreTech App\git\flexicount\src\pages\signoff\signoff.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
@@ -1941,7 +1941,7 @@ var HomePage = /** @class */ (function () {
     ], HomePage.prototype, "password", void 0);
     HomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-home',template:/*ion-inline-start:"E:\Pralay\work\StoreTech App\git\flexicount\src\pages\home\home.html"*/'\n\n<ion-content padding id="home_page">\n\n  <!-- <img class="header_image" src="../assets/imgs/Logo2.PNG"/> -->\n\n  <h1><img class="logo_text" src="./assets/imgs/brand.png"/></h1>\n\n  <h6>Flexicount<br/> Powered By StoreTech</h6>\n\n\n\n  <h6>Please Sign In</h6>\n\n\n\n  <ion-list class="login_area">\n\n      <ion-row>\n\n        <ion-col col-12>\n\n            <ion-item class="ref_input">\n\n              <ion-label fixed>Username</ion-label>\n\n              <ion-input type="text" #username></ion-input>\n\n            </ion-item>\n\n        </ion-col>\n\n      </ion-row>\n\n      \n\n      <ion-row>\n\n          <ion-col col-12>\n\n            <ion-item class="ref_input">\n\n              <ion-label fixed>Password</ion-label>\n\n              <ion-input type="password" #password></ion-input>\n\n            </ion-item>\n\n          </ion-col>\n\n      </ion-row>\n\n\n\n      <ion-row>\n\n          <ion-col col-6>\n\n              <ion-item>\n\n                <ion-label>English</ion-label>\n\n                <ion-select [(ngModel)]="language">\n\n                  <ion-option value="Russin">Russian</ion-option>\n\n                  <ion-option value="Urdu">Urdu</ion-option>\n\n                  <ion-option value="Hindi">Hindi</ion-option>\n\n                  <ion-option value="Chinise">Chinise</ion-option>\n\n                  <ion-option value="Spainish">Spainish</ion-option>\n\n                  <ion-option value="German">German</ion-option>\n\n                </ion-select>\n\n              </ion-item>\n\n          </ion-col>\n\n          <ion-col col-6>\n\n              <ion-item class="ckbx">\n\n                  <ion-label>Remember Me</ion-label>\n\n                  <ion-checkbox  checked="true"></ion-checkbox>\n\n              </ion-item>\n\n          </ion-col>\n\n      </ion-row>\n\n\n\n      <ion-row>\n\n          <ion-col col-12>\n\n            <button ion-button color="textlight" full (click)=login()>Log In</button>\n\n            <button ion-button color="textlight" full (click)=signup()>Login2</button>\n\n            <button ion-button color="textlight" full (click)=news()>News Feed</button>\n\n          </ion-col>\n\n      </ion-row>\n\n\n\n      <!-- <ion-row>\n\n          <ion-col col-6 class="text left">\n\n              privacy\n\n          </ion-col>\n\n          <ion-col col-6 class="text right">\n\n              forgot Password?\n\n          </ion-col>\n\n      </ion-row> -->\n\n\n\n    \n\n    </ion-list>\n\n</ion-content>\n\n\n\n'/*ion-inline-end:"E:\Pralay\work\StoreTech App\git\flexicount\src\pages\home\home.html"*/
+            selector: 'page-home',template:/*ion-inline-start:"E:\Pralay\work\StoreTech App\git\flexicount\src\pages\home\home.html"*/'\n\n<ion-content padding id="home_page">\n\n  <!-- <img class="header_image" src="../assets/imgs/Logo2.PNG"/> -->\n\n  <h1><img class="logo_text" src="./assets/imgs/brand.png"/></h1>\n\n  <h6>Flexicount<br/> Powered By StoreTech</h6>\n\n\n\n  <h6>Please Sign In</h6>\n\n\n\n  <ion-list class="login_area">\n\n      <ion-row>\n\n        <ion-col col-12>\n\n            <ion-item class="ref_input">\n\n              <ion-label fixed>Username</ion-label>\n\n              <ion-input type="text" #username></ion-input>\n\n            </ion-item>\n\n        </ion-col>\n\n      </ion-row>\n\n      \n\n      <ion-row>\n\n          <ion-col col-12>\n\n            <ion-item class="ref_input">\n\n              <ion-label fixed>Password</ion-label>\n\n              <ion-input type="password" #password></ion-input>\n\n            </ion-item>\n\n          </ion-col>\n\n      </ion-row>\n\n\n\n      <ion-row>\n\n          <ion-col col-6>\n\n              <ion-item>\n\n                <ion-label>English</ion-label>\n\n                <ion-select [(ngModel)]="language">\n\n                  <ion-option value="Russin">Russian</ion-option>\n\n                  <ion-option value="Urdu">Urdu</ion-option>\n\n                  <ion-option value="Hindi">Hindi</ion-option>\n\n                  <ion-option value="Chinise">Chinise</ion-option>\n\n                  <ion-option value="Spainish">Spainish</ion-option>\n\n                  <ion-option value="German">German</ion-option>\n\n                </ion-select>\n\n              </ion-item>\n\n          </ion-col>\n\n          <ion-col col-6>\n\n              <ion-item class="ckbx">\n\n                  <ion-label>Remember Me</ion-label>\n\n                  <ion-checkbox  checked="true"></ion-checkbox>\n\n              </ion-item>\n\n          </ion-col>\n\n      </ion-row>\n\n\n\n      <ion-row>\n\n          <ion-col col-12>\n\n            <button ion-button color="textlight" full (click)=login()>Log In</button>\n\n            <!-- <button ion-button color="textlight" full (click)=signup()>Login2</button>\n\n            <button ion-button color="textlight" full (click)=news()>News Feed</button> -->\n\n          </ion-col>\n\n      </ion-row>\n\n\n\n      <!-- <ion-row>\n\n          <ion-col col-6 class="text left">\n\n              privacy\n\n          </ion-col>\n\n          <ion-col col-6 class="text right">\n\n              forgot Password?\n\n          </ion-col>\n\n      </ion-row> -->\n\n\n\n    \n\n    </ion-list>\n\n</ion-content>\n\n\n\n'/*ion-inline-end:"E:\Pralay\work\StoreTech App\git\flexicount\src\pages\home\home.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */]])
     ], HomePage);
